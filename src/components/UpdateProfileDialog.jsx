@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Dialog, DialogHeader, DialogContent, DialogTitle } from './ui/dialog';
 import { Label } from './ui/label';
 import { Button } from './ui/button';
