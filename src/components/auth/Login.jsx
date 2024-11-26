@@ -1,5 +1,5 @@
 import { Input } from '../ui/input';
-import { Label } from '../ui/Label';
+import { Label } from '../ui/label';
 import Navbar from '../shared/Navbar';
 import { RadioGroup } from '../ui/radio-group';
 import { Button } from '../ui/button';
