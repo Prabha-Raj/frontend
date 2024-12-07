@@ -1,4 +1,3 @@
-import React from 'react';
 import { Popover, PopoverContent, PopoverTrigger } from '../ui/popover';
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
 import { Button } from '../ui/button';
@@ -71,14 +70,14 @@ const Navbar = () => {
                             <Popover>
                                 <PopoverTrigger>
                                     <Avatar className="cursor-pointer">
-                                        <AvatarImage src={user.profile.profilePhoto || "https://github.com/shadcn.png"} alt={user.name || "User"} />
+                                        <AvatarImage src={user?.profile?.profilePhoto || "https://github.com/shadcn.png"} alt={user.name || "User"} />
                                         <AvatarFallback>{user.initials || "U"}</AvatarFallback>
                                     </Avatar>
                                 </PopoverTrigger>
                                 <PopoverContent className="w-80">
                                     <div className='flex gap-4'>
                                         <Avatar>
-                                            <AvatarImage src={user.profile.profilePhoto || "https://github.com/shadcn.png"} alt={user.name || "User"} />
+                                            <AvatarImage src={user?.profile?.profilePhoto || "https://github.com/shadcn.png"} alt={user.name || "User"} />
                                             <AvatarFallback>{user.initials || "U"}</AvatarFallback>
                                         </Avatar>
                                         <div>
