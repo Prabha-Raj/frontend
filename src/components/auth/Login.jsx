@@ -39,6 +39,8 @@ const Login = () => {
                 },
                 withCredentials: true
             });
+            console.log(res);
+            sessionStorage.setItem("token",res.data.token)
             if (res.data.success) {
                 dispatch(setUser(res.data.user))
                 toast.success(res.data.message);

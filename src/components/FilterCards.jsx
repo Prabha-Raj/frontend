@@ -26,6 +26,7 @@ const FilterCards = () => {
     }
     useEffect(()=>{
         dispatch(setSearchQuery(selectedValue))
+        console.log(selectedValue)
     },[selectedValue,dispatch])
 
   return (
@@ -34,13 +35,13 @@ const FilterCards = () => {
       <hr className='mt-3'/>
       <RadioGroup value={selectedValue} onValueChange={changeHandler} >
         {
-            filterData.map((data, index)=>(
-                <div key={index} className='font-bold text-lg'>
+            filterData.map((data,index)=>(
+                <div key={`${index}+10`} className='font-bold text-lg'>
                     <h1>{data.filterType}</h1>
                     {
                         data.fitlerArray.map((item, idx)=>{
                             return (
-                                <div key={item._id} className='flex items-center space-x-2 my-2'>
+                                <div key={`item+${idx}`} className='flex items-center space-x-2 my-2'>
                                     <RadioGroupItem value={item} id={`itemId${idx}`} />
                                     <label htmlFor={`itemId${idx}`} className='text-sm text-gray-700 font-bold cursor-pointer'>{item}</label>
                                 </div>
